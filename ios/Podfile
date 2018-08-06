@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '11.0'
 
 target 'MedicineReminder' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -8,7 +8,7 @@ target 'MedicineReminder' do
   # Pods for MedicineReminder
 
   # Required by RNFirebase
-  pod 'Firebase/Core'
+  pod 'Firebase/Core', '~> 4.7.0'
 
   # [OPTIONAL PODS] - comment out pods for firebase products you won't be using.
   pod 'Firebase/AdMob'
@@ -21,6 +21,8 @@ target 'MedicineReminder' do
   pod 'Firebase/Messaging'
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Storage'
+  pod 'Firebase/Analytics'
+  pod 'FirebaseSwizzlingUtilities', '1.0.0'
   pod 'react-native-calendar-events', :path => '../node_modules/react-native-calendar-events'
 
   pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
@@ -28,5 +30,22 @@ target 'MedicineReminder' do
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
-
+  pod "yoga", :path => "../node_modules/react-native/ReactCommon/yoga"
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+      # 'BatchedBridge', # Required For React Native 0.45.0+
+      'Core',
+      'ART',
+      'DevSupport',
+      'RCTNetwork',
+      'RCTActionSheet',
+      'RCTAnimation',
+      'RCTGeolocation',
+      'RCTImage',
+      'RCTLinkingIOS',
+      'RCTSettings',
+      'RCTText',
+      'RCTVibration',
+      'RCTWebSocket',
+      # Add any other subspecs you want to use in your project
+      ]
 end
